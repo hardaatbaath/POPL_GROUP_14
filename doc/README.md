@@ -1,4 +1,4 @@
-hh# A* Pathfinding Implementation in Rust, Python, and C++
+# A* Pathfinding Implementation in Rust, Python, and C++
 ### **Project members**
     *  Hardaat Singh Baath       -   2021A7PS2662G 
     *  Sehajpreet Singh Chawla   -   2021A7PS2048G
