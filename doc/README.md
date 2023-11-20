@@ -1,4 +1,4 @@
-# A* Pathfinding Implementation in Rust, Python, and C++
+hh# A* Pathfinding Implementation in Rust, Python, and C++
 ### **Project members**
     *  Hardaat Singh Baath       -   2021A7PS2662G 
     *  Sehajpreet Singh Chawla   -   2021A7PS2048G
@@ -72,22 +72,31 @@ In summary, the choice between Rust, C++, and Python depends on factors such as 
 
 
 ## Principles of Programming Language used
-### Ownership:
+### Ownership and Lifetimes:
 
 * **Definition:** Ownership is Rust's mechanism for managing memory and ensuring memory safety without a garbage collector. It involves tracking which part of code owns a piece of data and is responsible for cleaning it up.
+
 * **How it Works:** Each value in Rust has a variable that is its "owner." A value can only have one owner at a time. When the owner goes out of scope, Rust automatically cleans up the memory associated with the value.
 * **Use in code:**
 ```
+Ownership and lifetimes are implicit in the usage of references
 ```
 
-### Borrowing:
+### Referencing and Borrowing:
 
-* **Definition:** Borrowing is the mechanism by which references to values are passed around in Rust without transferring ownership. Borrowing allows multiple parts of the code to read or use data without taking ownership.
+* **Definition:** 
+    * Borrowing: is the mechanism by which references to values are passed around in Rust without transferring ownership.
+Borrowing allows multiple parts of the code to read or use data without taking ownership.
+
+    * Referencing:  Referencing is the act of creating references to values, allowing functions or other parts of the code to operate on the data without taking ownership.
 * **Types of Borrowing:**
     1. **Immutable Borrowing (&T):** Allows reading the data but not modifying it.
     2. **Mutable Borrowing (&mut T):** Allows both reading and modifying the data but ensures exclusive access.
 * **Use in code:**
 ```
+Line 50: In the astar function, grid is passed as a reference to a slice of slices: &[Vec<i32>]. This is borrowing the grid without taking ownership.
+Line 98: In the get_neighbors function, node is borrowed when calling get_neighbors(current, width, height):
+Line 128: In the heuristic function, start and goal are borrowed when calculating the Manhattan distance:
 ```
 
 ### Mutability:
@@ -96,15 +105,29 @@ In summary, the choice between Rust, C++, and Python depends on factors such as 
 * **How it Works:** When a reference is mutable (&mut T), it allows changes to the underlying data. However, there can be only one mutable reference to a piece of data in a given scope to avoid data races.
 * **Use in code:**
 ```
-100
+Line 4
+Line 6
+Line 8
+Line 9
+Line 11
 ```
 
-### Referencing:
+### Pattern Matching:
 
-* **Definition:** Referencing is the act of creating references to values, allowing functions or other parts of the code to operate on the data without taking ownership.
-* **Syntax:** References are created using the & symbol, and mutable references use &mut
+* **Definition:** Pattern matching is a programming language feature that allows you to match complex data structures, such as algebraic data types or data structures with nested components, against a specific pattern. It is a way of expressing conditional behavior based on the shape or structure of data.
 * **Use in code:**
 ```
+Line 135: Pattern matching in the while loop
+```
+
+### Traits:
+
+* **Definition:** Traits define a set of methods that can be implemented by types. They are a way to group method signatures together and provide a common interface for different types.
+* **Purpose:** Traits enable code reuse and polymorphism by allowing multiple types to implement the same set of methods
+* **Use in code:**
+```
+Line 30: Ord trait implementation for Node
+Line 38: PartialOrd trait implementation for Node
 ```
 
 ## Results
