@@ -96,7 +96,7 @@ Borrowing allows multiple parts of the code to read or use data without taking o
 ```
 Line 50: In the astar function, grid is passed as a reference to a slice of slices: &[Vec<i32>]. This is borrowing the grid without taking ownership.
 Line 98: In the get_neighbors function, node is borrowed when calling get_neighbors(current, width, height):
-Line 128: In the heuristic function, start and goal are borrowed when calculating the Manhattan distance:
+Line 124: In the heuristic function, start and goal are borrowed when calculating the Manhattan distance:
 ```
 
 ### Mutability:
@@ -105,11 +105,11 @@ Line 128: In the heuristic function, start and goal are borrowed when calculatin
 * **How it Works:** When a reference is mutable (&mut T), it allows changes to the underlying data. However, there can be only one mutable reference to a piece of data in a given scope to avoid data races.
 * **Use in code:**
 ```
-[Line 4](C:\Users\vishe\Desktop\POPL_GROUP_14\code-orig\rust_code.rs#L4)
-Line 6
-Line 8
-Line 9
-Line 11
+Line 56
+Line 57
+Line 58
+Line 132
+Line 133
 ```
 
 ### Pattern Matching:
