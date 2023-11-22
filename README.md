@@ -105,7 +105,7 @@ Line 128: In the heuristic function, start and goal are borrowed when calculatin
 * **How it Works:** When a reference is mutable (&mut T), it allows changes to the underlying data. However, there can be only one mutable reference to a piece of data in a given scope to avoid data races.
 * **Use in code:**
 ```
-Line 4
+[Line 4](C:\Users\vishe\Desktop\POPL_GROUP_14\code-orig\rust_code.rs#L4)
 Line 6
 Line 8
 Line 9
