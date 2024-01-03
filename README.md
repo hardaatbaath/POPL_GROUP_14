@@ -7,26 +7,26 @@
 
 ## Problem Statement
 ### Original Statement:
-    The project aims to implement the A* pathfinding algorithm in Rust, Python, and C++. The primary focus is on optimizing execution time, CPU utilization, and dynamic memory allocation, particularly in the context of a 2D matrix representing an occupancy grid.
+   The project aims to implement the A* pathfinding algorithm in Rust, Python, and C++. The primary focus is on optimizing execution time, CPU utilization, and dynamic memory allocation, particularly in the context of a 2D matrix representing an occupancy grid.
 
 ### POPL Angle:
-    The core of the problem lies in efficiently finding the optimal path in a grid, a common challenge in robotics, gaming, and various AI applications. The POPL angle here involves optimizing the code for performance, memory usage, and considering language-specific nuances. While A* is a well-known algorithm, the unique aspect is the emphasis on language-specific optimizations and their impact on the mentioned metrics.
+   The core of the problem lies in efficiently finding the optimal path in a grid, a common challenge in robotics, gaming, and various AI applications. The POPL angle here involves optimizing the code for performance, memory usage, and considering language-specific nuances. While A* is a well-known algorithm, the unique aspect is the emphasis on language-specific optimizations and their impact on the mentioned metrics.
 
 ### Solution Differentiation:
-    While A* implementations exist, our solution differentiates itself by focusing on language-specific optimizations, particularly in Rust, Python, and C++. The project explores how each language's features and characteristics influence the performance of the algorithm. In terms of papers on algorithm comparison, we weren't able to find any previous papers on it, and we have done our own implementation.
+   While A* implementations exist, our solution differentiates itself by focusing on language-specific optimizations, particularly in Rust, Python, and C++. The project explores how each language's features and characteristics influence the performance of the algorithm. In terms of papers on algorithm comparison, we weren't able to find any previous papers on it, and we have done our own implementation.
 
 ## Software Architecture
 ### Overview:
-    The project follows a modular architecture with language-specific implementations of the A* algorithm. Each implementation includes modules for grid representation, A* logic, and performance testing.
+   The project follows a modular architecture with language-specific implementations of the A* algorithm. Each implementation includes modules for grid representation, A* logic, and performance testing.
 
 ### Reusability:
-    We went throught the implementation of A* algorithm and wrote it in Python. We then converted the same code in C++ as well. Common algorithmic components are shared across implementations, emphasizing code modularity. The implementations differ in how they handle memory, threading, and other language-specific features. 
+   We went throught the implementation of A* algorithm and wrote it in Python. We then converted the same code in C++ as well. Common algorithmic components are shared across implementations, emphasizing code modularity. The implementations differ in how they handle memory, threading, and other language-specific features. 
 
 ### Testing Component:
-    The testing component is integrated into each implementation. Performance tests measure execution time, CPU utilization, and memory usage. The testing component can run locally or remotely, depending on the chosen configuration. For the values calculated, we took averages to ensure that outliers do not effect our data.
+   The testing component is integrated into each implementation. Performance tests measure execution time, CPU utilization, and memory usage. The testing component can run locally or remotely, depending on the chosen configuration. For the values calculated, we took averages to ensure that outliers do not effect our data.
 
 ### Database:
-    No database is involved in this project as the focus is on algorithmic efficiency and language-specific optimizations.
+   No database is involved in this project as the focus is on algorithmic efficiency and language-specific optimizations.
 
 ## Languages used  for the Project
 
