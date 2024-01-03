@@ -1,36 +1,36 @@
 # A* Pathfinding Implementation in Rust, Python, and C++
-### **Project members**
+#### **Project members**
     *  Hardaat Singh Baath       -   2021A7PS2662G 
     *  Sehajpreet Singh Chawla   -   2021A7PS2048G
     *  Manraj Singh Chahal       -   2021A7PS2630G
     *  Vishesh Goyal             -   2021A7PS2628G
 
 ## Problem Statement
-### Original Statement:
+#### Original Statement:
    The project aims to implement the A* pathfinding algorithm in Rust, Python, and C++. The primary focus is on optimizing execution time, CPU utilization, and dynamic memory allocation, particularly in the context of a 2D matrix representing an occupancy grid.
 
-### POPL Angle:
+#### POPL Angle:
    The core of the problem lies in efficiently finding the optimal path in a grid, a common challenge in robotics, gaming, and various AI applications. The POPL angle here involves optimizing the code for performance, memory usage, and considering language-specific nuances. While A* is a well-known algorithm, the unique aspect is the emphasis on language-specific optimizations and their impact on the mentioned metrics.
 
-### Solution Differentiation:
+#### Solution Differentiation:
    While A* implementations exist, our solution differentiates itself by focusing on language-specific optimizations, particularly in Rust, Python, and C++. The project explores how each language's features and characteristics influence the performance of the algorithm. In terms of papers on algorithm comparison, we weren't able to find any previous papers on it, and we have done our own implementation.
 
 ## Software Architecture
-### Overview:
+#### Overview:
    The project follows a modular architecture with language-specific implementations of the A* algorithm. Each implementation includes modules for grid representation, A* logic, and performance testing.
 
-### Reusability:
+#### Reusability:
    We went throught the implementation of A* algorithm and wrote it in Python. We then converted the same code in C++ as well. Common algorithmic components are shared across implementations, emphasizing code modularity. The implementations differ in how they handle memory, threading, and other language-specific features. 
 
-### Testing Component:
+#### Testing Component:
    The testing component is integrated into each implementation. Performance tests measure execution time, CPU utilization, and memory usage. The testing component can run locally or remotely, depending on the chosen configuration. For the values calculated, we took averages to ensure that outliers do not effect our data.
 
-### Database:
+#### Database:
    No database is involved in this project as the focus is on algorithmic efficiency and language-specific optimizations.
 
 ## Languages used  for the Project
 
-### Rust:
+#### Rust:
 * **Memory Safety:**
 Rust's ownership system ensures memory safety without the need for garbage collection. This can help prevent common memory-related errors.
 * **Performance:**
@@ -40,7 +40,7 @@ Rust's ownership system also helps prevent data races, making concurrent program
 * **Expressive Type System:**
 Rust's type system allows for expressive and flexible code, enabling you to write concise and clear implementations.
 
-### C++:
+#### C++:
 * **Performance:**
 C++ is known for its performance and efficiency. It provides low-level control and allows for fine-tuning of algorithms.
 * **Standard Template Library (STL):**
@@ -50,7 +50,7 @@ C++ supports OOP principles, which can be beneficial for organizing code and cre
 * **Legacy Code Compatibility:**
 C++ has been widely used for a long time, and there are many libraries and existing codebases that can be leveraged.
 
-### Python:
+#### Python:
 * **Ease of Implementation:**
 Python is known for its readability and simplicity, making it easier to implement algorithms quickly.
 * **Rapid Prototyping:**
@@ -60,7 +60,7 @@ Python has a large and active community with a rich ecosystem of libraries. Impl
 * **Interpreted Language:**
 Python's interpreted nature allows for quick testing and debugging, facilitating the development process.
 
-#### Considerations:
+##### Considerations:
 * **Algorithm Complexity:**
 If performance is critical and the algorithm will be applied to large datasets, Rust or C++ might be more suitable due to their emphasis on low-level control and efficiency.
 * **Prototyping and Experimentation:**
@@ -72,7 +72,7 @@ In summary, the choice between Rust, C++, and Python depends on factors such as 
 
 
 ## Principles of Programming Language used
-### Ownership and Lifetimes:
+#### Ownership and Lifetimes:
 
 * **Definition:** Ownership is Rust's mechanism for managing memory and ensuring memory safety without a garbage collector. It involves tracking which part of code owns a piece of data and is responsible for cleaning it up.
 
@@ -82,7 +82,7 @@ In summary, the choice between Rust, C++, and Python depends on factors such as 
 Ownership and lifetimes are implicit in the usage of references
 ```
 
-### Referencing and Borrowing:
+#### Referencing and Borrowing:
 
 * **Definition:** 
     * Borrowing: is the mechanism by which references to values are passed around in Rust without transferring ownership.
@@ -99,7 +99,7 @@ Line 98: In the get_neighbors function, node is borrowed when calling get_neighb
 Line 124: In the heuristic function, start and goal are borrowed when calculating the Manhattan distance:
 ```
 
-### Mutability:
+#### Mutability:
 
 * **Definition:** Rust distinguishes between mutable and immutable references. It enforces the principle that either one or the other can occur, preventing data races at compile time.
 * **How it Works:** When a reference is mutable (&mut T), it allows changes to the underlying data. However, there can be only one mutable reference to a piece of data in a given scope to avoid data races.
@@ -112,7 +112,7 @@ Line 132
 Line 133
 ```
 
-### Pattern Matching:
+#### Pattern Matching:
 
 * **Definition:** Pattern matching is a programming language feature that allows you to match complex data structures, such as algebraic data types or data structures with nested components, against a specific pattern. It is a way of expressing conditional behavior based on the shape or structure of data.
 * **Use in code:**
@@ -120,7 +120,7 @@ Line 133
 Line 135: Pattern matching in the while loop
 ```
 
-### Traits:
+#### Traits:
 
 * **Definition:** Traits define a set of methods that can be implemented by types. They are a way to group method signatures together and provide a common interface for different types.
 * **Purpose:** Traits enable code reuse and polymorphism by allowing multiple types to implement the same set of methods
